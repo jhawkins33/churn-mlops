@@ -1,0 +1,32 @@
+# --- Python ---
+venv/
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+
+# --- Secrets / local config ---
+.env
+
+# --- Terraform ---
+# State lives remotely in S3 (churn-mlops-tfstate) — no local copies should be committed.
+.terraform/
+*.tfstate
+*.tfstate.backup
+.terraform.lock.hcl
+crash.log
+
+# --- Data ---
+# Raw/processed data lives in S3 (churn-mlops-raw-dev / churn-mlops-processed-dev).
+# Keep the repo lean — document how to fetch it in the README instead.
+*.csv
+
+# --- Model artifacts ---
+# Trained models live in S3 (churn-mlops-artifacts-dev), not in git.
+*.joblib
+*.tar.gz
+
+# --- OS / editor cruft ---
+.DS_Store
+.vscode/
+.idea/
