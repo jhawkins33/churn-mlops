@@ -49,6 +49,9 @@ def main():
 
     print("Submitting training job to SageMaker...")
     estimator.fit({"train": TRAIN_DATA_S3})
+    
+    with open(".last_model_data", "w") as f:
+        f.write(estimator.model_data)
 
     print(f"\nTraining complete.")
     print(f"Model artifact: {estimator.model_data}")
