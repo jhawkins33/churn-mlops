@@ -124,5 +124,15 @@ This project pins `sagemaker<3`. The v3 SDK (released Nov 2025) removed the `Est
 * \[x] Managed SageMaker training job
 * \[X] SageMaker endpoint deployment
 * \[ ] CI/CD (GitHub Actions for plan/apply, retraining triggers)
-* \[ ] Model monitoring / drift detection
+* \[x] Model monitoring / drift detection
+
+## Drift detection
+
+Since production traffic isn't available for a portfolio project, this validates a real statistical technique rather than faking a live monitoring dashboard:
+
+- `src/compute_baseline.py` — computes per-feature baseline distributions from training data (quantile-binned for continuous features, binary split for 0/1 dummies)
+- `src/detect_drift.py` — compares new data against the baseline using **Population Stability Index (PSI)** per feature, classifies each as stable/moderate/significant drift, and supports `--fail-on-drift` for CI gating
+- `src/simulate_drift.py` — generates a synthetically drifted copy of the data (shifted tenure, pricing, contract mix) specifically to validate the detector actually catches real drift, not just stays silent
+
+Validated end-to-end: zero false positives against unchanged data, correctly flagged all 4 manipulated features (3 significant, 1 moderate) against synthetic drift, with 0 false negatives on untouched features. See `data/example_drift_report.md` for a sample generated report.
 
