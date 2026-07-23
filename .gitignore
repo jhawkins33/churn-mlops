@@ -21,6 +21,7 @@ crash.log
 # Raw/processed data lives in S3 (churn-mlops-raw-dev / churn-mlops-processed-dev).
 # Keep the repo lean — document how to fetch it in the README instead.
 *.csv
+!tests/fixtures/*.csv
 data/drift_report.md
 data/baseline.json
 

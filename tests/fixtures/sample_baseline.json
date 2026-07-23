@@ -1,0 +1,378 @@
+{
+  "gender": {
+    "edges": [
+      -Infinity,
+      0.5,
+      Infinity
+    ],
+    "proportions": [
+      0.48,
+      0.52
+    ]
+  },
+  "SeniorCitizen": {
+    "edges": [
+      -Infinity,
+      0.5,
+      Infinity
+    ],
+    "proportions": [
+      0.92,
+      0.08
+    ]
+  },
+  "Partner": {
+    "edges": [
+      -Infinity,
+      0.5,
+      Infinity
+    ],
+    "proportions": [
+      0.58,
+      0.42
+    ]
+  },
+  "Dependents": {
+    "edges": [
+      -Infinity,
+      0.5,
+      Infinity
+    ],
+    "proportions": [
+      0.68,
+      0.32
+    ]
+  },
+  "tenure": {
+    "edges": [
+      -Infinity,
+      2.0,
+      10.0,
+      14.800000000000004,
+      23.5,
+      34.0,
+      49.0,
+      58.0,
+      69.1,
+      Infinity
+    ],
+    "proportions": [
+      0.22,
+      0.1,
+      0.08,
+      0.1,
+      0.12,
+      0.12,
+      0.08,
+      0.08,
+      0.1
+    ]
+  },
+  "PhoneService": {
+    "edges": [
+      -Infinity,
+      0.5,
+      Infinity
+    ],
+    "proportions": [
+      0.1,
+      0.9
+    ]
+  },
+  "PaperlessBilling": {
+    "edges": [
+      -Infinity,
+      0.5,
+      Infinity
+    ],
+    "proportions": [
+      0.42,
+      0.58
+    ]
+  },
+  "MonthlyCharges": {
+    "edges": [
+      -Infinity,
+      20.74,
+      41.769999999999996,
+      52.680000000000014,
+      58.540000000000006,
+      67.67500000000001,
+      77.62000000000002,
+      89.385,
+      98.15,
+      103.81,
+      Infinity
+    ],
+    "proportions": [
+      0.1,
+      0.1,
+      0.1,
+      0.1,
+      0.1,
+      0.1,
+      0.1,
+      0.1,
+      0.1,
+      0.1
+    ]
+  },
+  "TotalCharges": {
+    "edges": [
+      -Infinity,
+      44.690000000000005,
+      175.65000000000003,
+      390.8150000000003,
+      917.0700000000003,
+      1685.675,
+      2244.0600000000045,
+      3518.0600000000004,
+      4353.1100000000015,
+      5749.935000000001,
+      Infinity
+    ],
+    "proportions": [
+      0.1,
+      0.1,
+      0.1,
+      0.1,
+      0.1,
+      0.1,
+      0.1,
+      0.1,
+      0.1,
+      0.1
+    ]
+  },
+  "MultipleLines_No phone service": {
+    "edges": [
+      -Infinity,
+      0.5,
+      Infinity
+    ],
+    "proportions": [
+      0.9,
+      0.1
+    ]
+  },
+  "MultipleLines_Yes": {
+    "edges": [
+      -Infinity,
+      0.5,
+      Infinity
+    ],
+    "proportions": [
+      0.6,
+      0.4
+    ]
+  },
+  "InternetService_Fiber optic": {
+    "edges": [
+      -Infinity,
+      0.5,
+      Infinity
+    ],
+    "proportions": [
+      0.6,
+      0.4
+    ]
+  },
+  "InternetService_No": {
+    "edges": [
+      -Infinity,
+      0.5,
+      Infinity
+    ],
+    "proportions": [
+      0.88,
+      0.12
+    ]
+  },
+  "OnlineSecurity_No internet service": {
+    "edges": [
+      -Infinity,
+      0.5,
+      Infinity
+    ],
+    "proportions": [
+      0.88,
+      0.12
+    ]
+  },
+  "OnlineSecurity_Yes": {
+    "edges": [
+      -Infinity,
+      0.5,
+      Infinity
+    ],
+    "proportions": [
+      0.6,
+      0.4
+    ]
+  },
+  "OnlineBackup_No internet service": {
+    "edges": [
+      -Infinity,
+      0.5,
+      Infinity
+    ],
+    "proportions": [
+      0.88,
+      0.12
+    ]
+  },
+  "OnlineBackup_Yes": {
+    "edges": [
+      -Infinity,
+      0.5,
+      Infinity
+    ],
+    "proportions": [
+      0.56,
+      0.44
+    ]
+  },
+  "DeviceProtection_No internet service": {
+    "edges": [
+      -Infinity,
+      0.5,
+      Infinity
+    ],
+    "proportions": [
+      0.88,
+      0.12
+    ]
+  },
+  "DeviceProtection_Yes": {
+    "edges": [
+      -Infinity,
+      0.5,
+      Infinity
+    ],
+    "proportions": [
+      0.58,
+      0.42
+    ]
+  },
+  "TechSupport_No internet service": {
+    "edges": [
+      -Infinity,
+      0.5,
+      Infinity
+    ],
+    "proportions": [
+      0.88,
+      0.12
+    ]
+  },
+  "TechSupport_Yes": {
+    "edges": [
+      -Infinity,
+      0.5,
+      Infinity
+    ],
+    "proportions": [
+      0.7,
+      0.3
+    ]
+  },
+  "StreamingTV_No internet service": {
+    "edges": [
+      -Infinity,
+      0.5,
+      Infinity
+    ],
+    "proportions": [
+      0.88,
+      0.12
+    ]
+  },
+  "StreamingTV_Yes": {
+    "edges": [
+      -Infinity,
+      0.5,
+      Infinity
+    ],
+    "proportions": [
+      0.6,
+      0.4
+    ]
+  },
+  "StreamingMovies_No internet service": {
+    "edges": [
+      -Infinity,
+      0.5,
+      Infinity
+    ],
+    "proportions": [
+      0.88,
+      0.12
+    ]
+  },
+  "StreamingMovies_Yes": {
+    "edges": [
+      -Infinity,
+      0.5,
+      Infinity
+    ],
+    "proportions": [
+      0.66,
+      0.34
+    ]
+  },
+  "Contract_One year": {
+    "edges": [
+      -Infinity,
+      0.5,
+      Infinity
+    ],
+    "proportions": [
+      0.82,
+      0.18
+    ]
+  },
+  "Contract_Two year": {
+    "edges": [
+      -Infinity,
+      0.5,
+      Infinity
+    ],
+    "proportions": [
+      0.78,
+      0.22
+    ]
+  },
+  "PaymentMethod_Credit card (automatic)": {
+    "edges": [
+      -Infinity,
+      0.5,
+      Infinity
+    ],
+    "proportions": [
+      0.7,
+      0.3
+    ]
+  },
+  "PaymentMethod_Electronic check": {
+    "edges": [
+      -Infinity,
+      0.5,
+      Infinity
+    ],
+    "proportions": [
+      0.72,
+      0.28
+    ]
+  },
+  "PaymentMethod_Mailed check": {
+    "edges": [
+      -Infinity,
+      0.5,
+      Infinity
+    ],
+    "proportions": [
+      0.78,
+      0.22
+    ]
+  }
+}
