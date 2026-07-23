@@ -116,6 +116,15 @@ python pipelines/launch\_training\_job.py
 
 This project pins `sagemaker<3`. The v3 SDK (released Nov 2025) removed the `Estimator`/`SKLearn` classes used here in favor of a new `ModelTrainer` API — pinning to the last stable v2.x release avoids a moving target while that API settles.
 
+## CI/CD
+
+GitHub Actions runs on every push/PR to `main` — deliberately scoped to be credential-free, since auto-applying Terraform or auto-triggering paid SageMaker jobs from every push is too risky for a personal AWS account tied to CI secrets:
+
+- **Python checks**: syntax validation across `src/` and `pipelines/`, plus a drift detection regression test against a small committed fixture dataset (`tests/fixtures/`) — proves the PSI drift logic keeps working correctly on every change
+- **Terraform checks**: `terraform fmt -check`, `terraform init -backend=false` (local-only, no AWS access), `terraform validate` — catches syntax and configuration errors before they'd ever reach a real `apply`
+
+Real `terraform plan`/`apply` and model retraining stay manual/local for now — a deliberate choice, not a limitation, consistent with how many production teams gate infrastructure and retraining behind explicit approval rather than full automation.
+
 ## Roadmap
 
 * \[x] Infrastructure as code (Terraform)
@@ -123,7 +132,7 @@ This project pins `sagemaker<3`. The v3 SDK (released Nov 2025) removed the `Est
 * \[x] Local baseline training
 * \[x] Managed SageMaker training job
 * \[X] SageMaker endpoint deployment
-* \[ ] CI/CD (GitHub Actions for plan/apply, retraining triggers)
+* \[x] CI/CD (GitHub Actions for plan/apply, retraining triggers)
 * \[x] Model monitoring / drift detection
 
 ## Drift detection
